@@ -1,0 +1,94 @@
+/* Réinitialisation des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fond de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titre principal */
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Menu de navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.section {
+    padding: 40px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Change de couleur lorsque l'utilisateur survole les sections */
+.section:hover {
+    background-color: #e9f7e9;
+}
+
+/* Titre de section */
+h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+/* Style des paragraphes */
+p {
+    font-size: 1.2em;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    /* Ajuste la disposition du menu de navigation */
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    /* Redimensionne les titres et les paragraphes */
+    h2 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}

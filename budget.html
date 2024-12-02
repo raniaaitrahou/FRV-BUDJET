@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un budget | FRV-BUDGET</title>
+    <link rel="stylesheet" href="style budjet.css">
+    <script src="script budjet.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>FRV-BUDGET</h1>
+        <nav>
+            <a href="index.html">Accueil</a> |
+            <a href="dashboard.html">Tableau de bord</a> |
+            <a href="budget.html">Créer un budget</a> |
+            <a href="conseils.html">Conseils et articles</a> |
+            <a href="contact.html">À propos et Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Créer un budget</h2>
+        <p>Établissez un budget personnalisé pour atteindre vos objectifs financiers</p>
+        <p> Merci de bien vouloir saisir vos informations pour créer votre compte et personnaliser votre expérience sur FRV-BUDGET</p>
+    </main>
+
+ <fieldset>
+ <legend><h3>Vos coordonnées</h3></legend> 
+ <table>
+    <tr>
+      <td><label for="nom">Nom: </label> </td>
+      <td><input type="texte" name="nom" id="nom"  placeholder="votre nom" size="20"  /><br><br></td>
+    </tr>
+    <tr>
+       <td><label for="prenom">Votre prénom:</label></td>
+       <td> <input type="text" name="prenom" id="prenom"placeholder="votre prenom" size="20"               /><br><br></td>
+  </tr>
+  <tr>
+      <td><label for="date">date de naissance: </label> </td>
+      <td> <input type="date" name="date" id="email" placeholder="jj/mm/aaaa" size="20" />             <br><br></td>
+  </tr>
+  <tr>
+     <td><label for="email"> Votre e-mail: </label></td>
+     <td><input type="email" name="email" id="email"placeholder="votre mail" size="20" /><br><br></td>
+ </tr>
+  <tr>
+    <td><label for="password"> Mot de passe :  </label></td>
+    <td>  <input type="password" name="password" id="password"  placeholder="Choisissez un mot de passe sécurisé pour protéger vos données" size="20" />            <br><br></td>
+ </tr>
+ <tr>
+    <td><label for="HOMME" >HOMME:</label> </td>
+    <td><input type="radio" name="sexe" value="HOMME" id="sexe"/><br><br></td>
+ </tr>
+ <tr>
+    <td><label for="FEMME" >FEMME:</label></td>
+    <td><input type="radio" name="sexe" value="FEMME" id="sexe"/><br><br></td>
+ </tr>
+    <td><label for="pays">votre pays: </label></td>  
+    <td><select name="pays" id="pays">
+         <option value="Votr pays">Votre pays</option>
+         <option value="MAROC">MAROC</option>
+         <option value="FRANCE">FRANCE</option>
+         <option value="ESPAGNE">ESPAGNE</option>
+         <option value="TUNISIE">TUNISIE</option>
+  </select></td>
+ </tr>
+<tr>
+     <td><label for="votre solde"> Votre solde  </label></td>
+     <td><input type="number" name="solde" id="number"placeholder="votre solde" size="20" /><br><br></td>
+ </tr>
+<tr>
+  <td><label for="Objectifs financiers">Objectifs financiers</label></td>
+ <td><textarea name="gout" id="gout" cols="40" rows="2" placeholder="Cette information nous aidera à mieux vous guider dans la gestion de votre budget."></textarea></td>
+</tr>
+ 
+</table>
+</fieldset>
+<fieldset>
+   <legend><h3>Envoyer nous votre photo </h3> </legend>
+  <label>Choisir le fichier : </label>
+  <input type="file" name="fichier" accept="image/jpeg" /> <br/>
+  <input type="hidden" name="MAX_FILE_SIZE" value="10000" /> <br/>
+  <input type="submit" value=" Envoyer " />
+  <input type="reset" value="Effacer toutes les données" />
+
+</fieldset>
+</body>
+</html>
+

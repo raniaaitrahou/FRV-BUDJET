@@ -1,0 +1,170 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Mise en forme du tableau de bord */
+main {
+    padding: 20px;
+}
+
+/* Titre principal */
+h2 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Vue d'ensemble (carte) */
+.overview-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 22%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+/* Alertes */
+.alerts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alerts li {
+    background-color: #ffdd57;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+/* Objectifs financiers */
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress {
+    background-color: #4CAF50;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Transactions récentes */
+.transactions table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transactions th, .transactions td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.transactions th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Budgétisation */
+.budget ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.budget li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Conseils financiers */
+.tips p {
+    font-size: 1.2em;
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 5px solid #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overview-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .transactions table {
+        font-size: 0.9em;
+    }
+}
