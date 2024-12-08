@@ -5,16 +5,20 @@
     box-sizing: border-box;
 }
 
-/* Fond de la page */
+/* Fond de la page avec image */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-image: url('emilio-takas-_GNVwZJv-Jo-unsplash.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* Pour couvrir toute la page */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    background-attachment: fixed; /* L'image reste fixe lorsque l'utilisateur défile */
+    color: #333; /* Texte de couleur noire ou gris foncé */
 }
 
 /* Header */
 .header {
-    background-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.8); /* Fond vert légèrement transparent */
     color: white;
     text-align: center;
     padding: 20px;
@@ -51,7 +55,7 @@ nav ul li a:hover {
 .section {
     padding: 40px;
     margin: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec transparence */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
