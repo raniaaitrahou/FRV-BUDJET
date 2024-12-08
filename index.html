@@ -5,13 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRV-BUDGET</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Style pour le bandeau de consentement */
+        #cookieConsent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: none; /* Par défaut, il est caché */
+        }
+        #cookieConsent button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        // Fonction pour ajouter un cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convertir les jours en millisecondes
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/"; // Définir le cookie
+        }
+
+        // Fonction pour récupérer un cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null; // Retourner null si le cookie n'existe pas
+        }
+
+        // Fonction qui s'active lorsque l'utilisateur accepte les cookies
+        function acceptCookies() {
+            setCookie('cookieConsent', 'true', 30); // Le cookie expirera dans 30 jours
+            document.getElementById('cookieConsent').style.display = 'none'; // Masquer le bandeau
+        }
+
+        // Vérifier si l'utilisateur a déjà accepté les cookies
+        window.onload = function() {
+            // Si le cookie 'cookieConsent' existe et a la valeur 'true', masquer le bandeau
+            if (getCookie('cookieConsent') === 'true') {
+                document.getElementById('cookieConsent').style.display = 'none'; // Masquer le bandeau
+            } else {
+                document.getElementById('cookieConsent').style.display = 'block'; // Afficher le bandeau si le cookie n'est pas trouvé
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="header">
         <h1>FRV-BUDGET</h1>
         <nav>
             <ul>
-               
                 <li><a href="dashboard.html">Tableau de bord</a></li>
                 <li><a href="budget.html">Créer un budget</a></li>
                 <li><a href="conseils.html">Conseils et articles</a></li>
@@ -44,6 +103,14 @@
         <h2>À propos et Contact</h2>
         <p>Contactez-nous pour plus d'informations.</p>
     </section>
+
+    <!-- Bandeau de consentement -->
+    <div id="cookieConsent">
+        <p>Nous utilisons des cookies pour améliorer votre expérience. En naviguant sur ce site, vous acceptez notre politique de cookies.</p>
+        <button onclick="acceptCookies()">Accepter</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
